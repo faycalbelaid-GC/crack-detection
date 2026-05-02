@@ -1,0 +1,29 @@
+data:
+  root: ./data/SDNET2018
+  batch_size: 32
+  num_workers: 4
+  val_size: 0.15
+  test_size: 0.15
+  seed: 42
+  image_size: 224
+
+model:
+  backbone: resnet50      # resnet18 | resnet34 | resnet50 | resnet101
+  pretrained: true
+  num_classes: 2
+  dropout: 0.5
+
+training:
+  epochs: 50
+  lr: 1.0e-4
+  weight_decay: 1.0e-4
+  warmup_epochs: 5
+  use_amp: true
+  gradient_clip: 1.0
+  patience: 10
+  min_delta: 1.0e-4
+
+paths:
+  checkpoints: ./checkpoints
+  logs: ./logs
+  outputs: ./outputs
