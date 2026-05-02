@@ -118,10 +118,6 @@ with gr.Blocks(title="Crack Detection AI", theme=gr.themes.Soft()) as demo:
         outputs=[gradcam_out, text_out, label_out],
     )
 
-    gr.Examples(
-        examples=[],
-        inputs=input_image,
-    )
 
     gr.Markdown(
         """
